@@ -1,0 +1,1 @@
+Train Time Table webpage allows user to view the list of trains arriving, frequency and minutes away. User can input new train in the second table with First train time. Our program than calculates the time away based on the current time to first train time. User can also delete the trains he doesn’t wish to show. 
