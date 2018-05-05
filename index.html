@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+      <!-- Link to Moment.js should go here -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+
+
+
+    <title>Train Schedule Using Firebase</title>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron mainHeader">
+            <h2 class="text-center"> Union Pacific Northwest Train Schedule </h2>
+            <p class="text-center">Northwestern Coding Bootcamp</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Current Train Schedule</div>
+                    <div class="panel-body">
+                        <table id="trainTimeTable" style="width:100%">
+                            <tr>
+                                <th>Train Name</th>
+                                <th>Destination </th>
+                                <th>Frequency(mins)</th>
+                                <th>Next Arrival</th>
+                                <th>Minutes Away</th>
+                            </tr>
+                            <tr>
+                                    <td id="trainName"></td>
+                                    <td id="destination"></td>
+                                    <td id="frequency"></td>
+                                    <td id="nextArrival"></td>
+                                    <td id="minAway"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Add Train</div>
+                        <div class="panel-body" id="formAddTrain">
+                            <form id="trainForm" class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="inputTrainName" class="col-sm-2 control-label">Train Name</label>
+                                    <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputTrainName" placeholder="Train Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputDestination" class="col-sm-2 control-label">Destination</label>
+                                    <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputDestination" placeholder="Destination">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                        <label for="firstTrain" class="col-sm-2 control-label">First Train Time (hh:mm-Military Time)</label>
+                                        <div class="col-sm-10">
+                                        <input type="time" class="form-control" id="firstTrainTime" placeholder="Time hh:mm">
+                                        </div>
+                                </div>
+                                <div class="form-group">
+                                        <label for="frequency" class="col-sm-2 control-label">Frequency (mins)</label>
+                                        <div class="col-sm-10">
+                                            <input type="number" class="form-control" id="inputFrequency" placeholder="Minutes">
+                                        </div>
+                                </div>     
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button  id="submit-form" type="submit" class="btn btn-primary">Submit </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div> <!--End of container Div-->
+<script type="text/javascript" src="assets/javascript/App.js"></script>
+<script type=""
+</body>
+</html>
